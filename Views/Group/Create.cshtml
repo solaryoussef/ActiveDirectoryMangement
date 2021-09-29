@@ -1,0 +1,18 @@
+﻿
+@page
+@model trialofAD.Models.Group;
+@{
+}
+
+<h1>Creating New Group  </h1>
+<form method="post">
+    <input hidden class="form-control" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="@Model.GroupName">Name: </label>
+        <input class="form-control" placeholder="enter name" asp-for="GroupName">
+        <span class="text-danger" asp-validation-for="@Model.GroupName"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<br /> <a asp-page="./GetAllGroups">back to list </a>

@@ -1,0 +1,24 @@
+﻿@page 
+@model trialofAD.Models.User;
+@{
+}
+
+<h1>Creating New User  </h1>
+<form method="post">
+    <input hidden class="form-control" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="@Model.DisplayName">Name: </label>
+        <input class="form-control" placeholder="enter name" asp-for="DisplayName">
+        <span class="text-danger" asp-validation-for="@Model.DisplayName"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Samaccountname">Account name: </label>
+        <input class="form-control" placeholder="enter Account name" asp-for="Samaccountname">
+        <span class="text-danger" asp-validation-for="@Model.Samaccountname"></span>
+    </div>
+   
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<br /> <a asp-page="./GetAllUsers">back to list </a>

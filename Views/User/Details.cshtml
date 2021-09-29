@@ -1,0 +1,23 @@
+﻿@page "{UserId:int}"
+
+
+@model trialofAD.Models.User;
+@{
+
+
+}
+
+
+   
+<h1>Details of @Model.DisplayName</h1>
+
+<div>
+    id : <span>@Model.Id</span>
+</div>
+
+<div>
+    Account name : <span>@Model.Samaccountname</span>
+</div>
+
+<a asp-page="./GetAllUsers">back to list </a>
+
